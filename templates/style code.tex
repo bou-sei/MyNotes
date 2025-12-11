@@ -1,11 +1,9 @@
 \documentclass[12pt]{article}
 \usepackage[a4paper, margin=2cm]{geometry}
 \title{How to format code in latex}
-
 \usepackage[dvipsnames]{xcolor}
 \usepackage{listings}
-\definecolor{verylightgray}{gray}{0.92}   % lighter than lightgray
-
+\definecolor{verylightgray}{gray}{0.92}
 \lstdefinestyle{csharpstyle}{
     language=[Sharp]C,
     basicstyle=\ttfamily\small\color{blue},
@@ -19,9 +17,7 @@
     showstringspaces=false,
     backgroundcolor=\color{verylightgray}
 }
-
 \lstset{style=csharpstyle}
-
 \begin{document}
 \maketitle
 \begin{lstlisting}
