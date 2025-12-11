@@ -1,0 +1,14 @@
+Private Sub Workbook_SheetChange(ByVal Sh As Object, ByVal Target As Range)
+    On Error GoTo ExitHandler
+
+    If Target.Cells.Count > 1 Then Exit Sub
+
+    If LCase(Target.Value) = "n" Then
+        Application.EnableEvents = False
+        Target.Value = Now
+        Target.NumberFormat = "mm-dd hh:mm"
+    End If
+
+ExitHandler:
+    Application.EnableEvents = True
+End Sub
